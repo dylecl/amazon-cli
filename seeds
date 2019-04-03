@@ -1,0 +1,17 @@
+DROP DATABASE if EXISTS store;
+CREATE DATABASE store;
+USE store;
+
+CREATE TABLE products (
+	id INT NOT NULL AUTO_INCREMENT,
+	NAME VARCHAR(50) NOT NULL,
+	category VARCHAR(50),
+	price DECIMAL(10,2) NOT null,
+	stock INT NOT NULL,
+	PRIMARY KEY (id)
+);
+
+INSERT INTO products (NAME, category, price, stock)
+VALUES ("Toilet Paper", "Home stuffs", 4.99, 125),("Apple(s)", "Food stuffs", 0.75, 1000), ("Ramen", "Food stuffs", 0.30, 1000),("Banana(s)","Food stuffs", 0.20, 1000),("Paper towels", "Home stuffs", 5.00, 500),("All purpose cleaner", "Home stuffs", 4.00, 300),("Silly puddy", "Fun stuffs", 2.00, 150),("Kickball", "Fun stuffs",7.50,85),("Fake spider", "Fun stuffs", 0.99, 10000);
+
+SELECT * FROM products;
